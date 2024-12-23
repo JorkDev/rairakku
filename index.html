@@ -42,6 +42,19 @@
             border-left: 4px solid #ffcc00;
             box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
         }
+        .sticker {
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            margin: 50px;
+        }
+        .vi-sticker .sticker-img {
+            background-image: url(./img/vi.png);
+            background-size: cover;
+        }
+        .vi-sticker .sticker-shadow {
+            opacity: 0.6;
+        }
         .highlight-1 { background-color: #807EBF; padding: 2px 4px; border-radius: 3px; }
         .highlight-2 { background-color: #9C9AD9; padding: 2px 4px; border-radius: 3px; }
         .highlight-3 { background-color: #8C6D11; padding: 2px 4px; border-radius: 3px; }
@@ -69,7 +82,10 @@
         <button onclick="showDecima('decima1')">Primera Décima</button>
         <button onclick="showDecima('decima2')">Segunda Décima</button>
     </div>
-
+    <div class="stickers">
+        <div class="sticker vi-sticker">
+        </div>
+    </div>
     <div id="decima1" class="décima">
         Tu ausencia es un cruel <span class="highlight-1">tormento</span>,<br>
         tu perfume un eco <span class="highlight-2">perdido</span>,<br>
@@ -96,5 +112,11 @@
         que mi memoria <span class="highlight-6">comparte</span>.<br>
     </div>
 </body>
+<script type="text/javascript">
+    window.onload = function() {
+        Sticker.init('.sticker');
+    }
+</script>
+
 <script src="sticker.min.js"></script>
 </html>
