@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfume de Cuerda y Fuego</title>
+    <title>Poemario</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -17,7 +17,25 @@
             text-align: center;
             color: #5a5a5a;
         }
+        .menu {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .menu button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #807EBF;
+            color: white;
+        }
+        .menu button:hover {
+            background-color: #9C9AD9;
+        }
         .décima {
+            display: none;
             margin: 20px 0;
             padding: 10px;
             background: #ffffff;
@@ -30,47 +48,47 @@
         .highlight-4 { background-color: #F2CBBD; padding: 2px 4px; border-radius: 3px; }
         .highlight-5 { background-color: #262626; padding: 2px 4px; color: #fff; border-radius: 3px; }
     </style>
+    <script>
+        function showDecima(id) {
+            document.querySelectorAll('.décima').forEach(function(decima) {
+                decima.style.display = 'none';
+            });
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
 </head>
 <body>
-    <h1>Perfume de Cuerda y Fuego</h1>
+    <h1>Poemario</h1>
 
-    <div class="décima">
-        Tu aroma, dulce y <span class="highlight-1">sereno</span>,<br>
-        trae la calma que me <span class="highlight-2">abraza</span>,<br>
-        y aunque mi razón <span class="highlight-3">desplaza</span>,<br>
-        lo busco, pues soy su <span class="highlight-1">pleno</span>.<br>
-        Es un fuego puro y <span class="highlight-1">lleno</span><br>
-        que enciende mi alma <span class="highlight-4">cautiva</span>,<br>
-        me calma, pero me <span class="highlight-4">aviva</span><br>
-        si el deseo lo <span class="highlight-5">requiere</span>.<br>
-        Es tu esencia la que <span class="highlight-5">hiere</span>,<br>
-        y a la vez, quien me <span class="highlight-4">deriva</span>.<br>
+    <div class="menu">
+        <button onclick="showDecima('decima1')">Primera Décima</button>
+        <button onclick="showDecima('decima2')">Segunda Décima</button>
     </div>
 
-    <div class="décima">
-        Cada vez que el aire <span class="highlight-1">trae</span><br>
-        tu fragancia tan <span class="highlight-2">querida</span>,<br>
-        mi cordura es <span class="highlight-2">sostenida</span><br>
-        y mi ser entero <span class="highlight-3">estalla</span>.<br>
-        Es el roce de tu <span class="highlight-3">playa</span><br>
-        en mi pecho, que no <span class="highlight-5">miento</span>:<br>
-        te pienso con cada <span class="highlight-5">aliento</span>,<br>
-        te ansío en cada <span class="highlight-5">latido</span>.<br>
-        Tu perfume es el <span class="highlight-4">sentido</span><br>
-        que llena todo mi <span class="highlight-4">intento</span>.<br>
+    <div id="decima1" class="décima">
+        Tu ausencia es un cruel tormento,<br>
+        tu perfume un eco perdido,<br>
+        tu voz, que al oído ha entrado,<br>
+        hace vibrar todo mi aliento.<br>
+        Te llevaste todo mi centro,<br>
+        mi corazón quedó en tus manos,<br>
+        extraño el calor de tus labios,<br>
+        la suavidad que en tu piel siento.<br>
+        Cada cicatriz, un momento,<br>
+        bajo mis manos, en tus brazos.<br>
     </div>
 
-    <div class="décima">
-        Espero siempre <span class="highlight-1">encontrarte</span><br>
-        y que el aire nos <span class="highlight-2">enlace</span>,<br>
-        que tu aroma nunca <span class="highlight-3">pase</span><br>
-        y logre siempre <span class="highlight-2">abrazarte</span>.<br>
-        Es un eco de tu <span class="highlight-4">parte</span>,<br>
-        el preludio de tu <span class="highlight-5">fuego</span>.<br>
-        De ti, mi esencia me <span class="highlight-4">entrego</span>,<br>
-        en cada dosis <span class="highlight-2">fragante</span>.<br>
-        Tu perfume, hilo <span class="highlight-1">constante</span>,<br>
-        es mi ancla, calma y <span class="highlight-3">juego</span>.<br>
+    <div id="decima2" class="décima">
+        Tus manos pequeñas, entrelazadas,<br>
+        hacen del recuerdo un refugio,<br>
+        la luna, cómplice del murmullo,<br>
+        testigo de noches guardadas.<br>
+        Tu piel es luz, nunca olvidada,<br>
+        que al tocarla calma y arde,<br>
+        y aunque la distancia aguarde,<br>
+        mi deseo sigue presente.<br>
+        Eres el eco latente<br>
+        que mi memoria comparte.<br>
     </div>
 </body>
 </html>
